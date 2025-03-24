@@ -15,10 +15,11 @@ start.addEventListener('click' , function start() {
     })
 
     reset.addEventListener('click' , function reset() {
-        current = setInterval(function () {seconds++}, 1000);
-        time = setInterval(function () {timer.innerHTML = `${seconds}`}, 1000);
         clearInterval(current)
         clearInterval(time)
+        seconds = 0
+        current = setInterval(function () {seconds++}, 1000);
+        time = setInterval(function () {timer.innerHTML = `${seconds}`}, 1000);
     })
 
 })
